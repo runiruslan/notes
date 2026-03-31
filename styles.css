@@ -147,4 +147,184 @@ body{
     filter: drop-shadow(0px  0px 10px rgb(3, 3, 173))
 }
 
-/*{outline: auto;}*/
+.burger{
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    color: white;
+    width: 54px;
+    height: 54px;
+    border-radius: 8px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+.nav_menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(-10px) scale(0.96);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.nav_menu.open{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+@media (max-width: 768px){
+    .main{
+        padding: 95px 10px 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 56px;
+    }
+
+    .nav{
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+    }
+
+    .burger{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.nav_menu{
+    position: absolute;
+    top: 62px;
+    left: 0;
+    display: flex;
+    margin-top: 0;
+    flex-direction: column;
+    gap: 6px;
+    opacity: 0;
+    transform: translateY(-10px) scale(0.96);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.nav_menu.open{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+    .button{
+        width: 54px;
+        height: 40px;
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #new_card{
+        height: 46px;
+        font-size: 28px;
+    }
+
+    .card{
+        width: 68%;
+        max-width: 68%;
+        height: 220px;
+        align-self: center !important;
+        margin: 0 auto;
+    }
+
+    .card textarea{
+        height: 220px;
+        min-height: 220px;
+        max-height: 220px;
+        padding: 24px 12px 14px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .lines{
+        height: 220px;
+        min-height: 220px;
+        max-height: 220px;
+        padding: 42px 12px 12px;
+    }
+
+    .lines div{
+        margin-bottom: 19px;
+        width: 100%;
+    }
+
+    .lines div:last-child{
+        margin-bottom: 0;
+    }
+
+    .circle{
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        top: -25px;
+        left: calc(50% - 25px);
+    }
+}
+    @media (max-width: 480px){
+    .main{
+        padding: 88px 8px 28px;
+        gap: 52px;
+    }
+
+    .nav{
+        z-index: 1;
+    }
+
+    .burger{
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .button{
+        width: 50px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    #new_card{
+        height: 42px;
+        font-size: 24px;
+    }
+
+    .card{
+        width: 72%;
+        max-width: 72%;
+        height: 205px;
+    }
+
+    .card textarea{
+        height: 250px;
+        min-height: 205px;
+        padding: 22px 10px 12px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .lines{
+        height: 205px;
+        min-height: 205px;
+        max-height: 205px;
+        padding: 38px 10px 10px;
+    }
+
+    .lines div{
+        margin-bottom: 17px;
+    }
+}

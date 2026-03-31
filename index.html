@@ -8,11 +8,15 @@
 </head>
 <body>
     <a id="top"></a>
-    <div class="nav">
-        <a class="button" href="#top">Go top</a>
+<div class="nav">
+    <button id="burger" class="burger" type="button">☰</button>
+
+    <div id="nav_menu" class="nav_menu">
+        <a class="button" href="#top">Top</a>
         <a id="new_card" href="#bottom" class="button">+</a>
-        <button class="button">New</button>
+        <button class="button" type="button">New</button>
     </div>
+</div>
 
     <div id="container" class="main">
         <div class="card">
@@ -86,26 +90,42 @@
 
     <a id="bottom"></a>
 
-    <script>
-        new_card.addEventListener("click", () => {
-            container.insertAdjacentHTML('beforeend',
-            `<div class="card">
-                <textarea spellcheck="false" maxlength="170"></textarea>
-                <div class="lines">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="circle"></div>
-            </div>`);
+<script>
+    const newCardBtn = document.getElementById("new_card");
+    const container = document.getElementById("container");
+    const burger = document.getElementById("burger");
+    const navMenu = document.getElementById("nav_menu");
+
+    burger.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+    });
+
+    newCardBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        container.insertAdjacentHTML('beforeend',
+        `<div class="card">
+            <textarea spellcheck="false" maxlength="170"></textarea>
+            <div class="lines">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="circle"></div>
+        </div>`);
+
+        const cards = container.querySelectorAll(".card");
+        cards[cards.length - 1].scrollIntoView({
+            behavior: "smooth",
+            block: "start"
         });
-    </script>
+    });
+</script>
 </body>
 </html>
