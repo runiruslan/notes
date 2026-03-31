@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Erica+One&family=Indie+Flower&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background:linear-gradient(to bottom, rgb(141, 141, 194), rgb(172, 135, 152) );
+    background-attachment: fixed;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 40% ;
+    box-sizing: border-box;
+}
+
+.card{
+    position: relative;
+    width: 45% ;
+    height: 15vh;
+    margin-bottom: 40px
+}
+
+.card textarea{
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    height: 30vh;
+    background-color: white;
+    border: 2px black solid;
+    filter: drop-shadow(1px 1px 5px black);
+    padding: 30px 13px;
+    line-height: 22px;
+    overflow: hidden;
+    font-family: "Delius Swash Caps", cursive;
+}
+
+.card textarea:focus{
+    outline: none;
+}
+
+.card:nth-child(2n) {
+    align-self: flex-end;
+}
+
+.card:nth-child(2n+1) {
+    align-self: flex-start;
+}
+
+.lines{
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    padding: 50px 15px;
+    pointer-events: none;
+}
+
+.lines div{
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 1px black solid;
+    width: 100%;
+}
+
+.circle{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border-radius: 30px;
+    top: -30px;
+    left: calc(50% - 30px);
+}
+
+.button{
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background-color: rgba(255, 255, 255, 0.3);
+    filter: drop-shadow( 0px 0px 2px white);
+    padding: 5px;
+    font-size: xx-large;
+    backdrop-filter: blur(10px);
+    width: 100px;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.nav{
+    position: fixed;
+    top: 20px;
+    left: 10px;
+
+}
+
+.button {
+  transition: all 0.15s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.card:nth-child(3n) .circle{
+    background-color: red;
+    filter: drop-shadow(0px  0px 5px red)
+}   
+
+.card:nth-child(3n-1) .circle{
+    background-color: yellow;
+    filter: drop-shadow(0px  0px 5px yellow)
+}
+
+.card:nth-child(3n-2) .circle{
+    background-color: blue;
+    filter: drop-shadow(0px  0px 5px blue)
+}
+
+.card:nth-child(3n) {
+    background-color: red;
+    filter: drop-shadow(0px  0px 10px rgb(167, 3, 3))
+}   
+
+.card:nth-child(3n-1) {
+    background-color: yellow;
+    filter: drop-shadow(0px  0px 10px rgb(201, 201, 5))
+}
+
+.card:nth-child(3n-2) {
+    background-color: blue;
+    filter: drop-shadow(0px  0px 10px rgb(3, 3, 173))
+}
+
+/*{outline: auto;}*/

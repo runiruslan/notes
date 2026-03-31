@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <a id="top"></a>
+    <div class="nav">
+        <a class="button" href="#top">Go top</a>
+        <a id="new_card" href="#bottom" class="button">+</a>
+        <button class="button">New</button>
+    </div>
+
+    <div id="container" class="main">
+        <div class="card">
+            <textarea spellcheck="false" maxlength="170"></textarea>
+            <div class="lines">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="circle"></div>
+        </div>
+
+        <div class="card">
+            <textarea spellcheck="false" maxlength="170"></textarea>
+            <div class="lines">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="circle"></div>
+        </div>
+
+        <div class="card">
+            <textarea spellcheck="false" maxlength="170"></textarea>
+            <div class="lines">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="circle"></div>
+        </div>
+
+        <div class="card">
+            <textarea spellcheck="false" maxlength="170"></textarea>
+            <div class="lines">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <a id="bottom"></a>
+
+    <script>
+        new_card.addEventListener("click", () => {
+            container.insertAdjacentHTML('beforeend',
+            `<div class="card">
+                <textarea spellcheck="false" maxlength="170"></textarea>
+                <div class="lines">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="circle"></div>
+            </div>`);
+        });
+    </script>
+</body>
+</html>
